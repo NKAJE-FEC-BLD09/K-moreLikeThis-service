@@ -6,7 +6,7 @@ const starsSeeder = require('./starsSeeder.js');
 const relatedMovies = require('./similarMoviesSeeder.js');
 
 
-const seeder = () => {
+const randomSeeder = () => {
   for (let i = 6; i <= 100; i++) {
     const film = new Movie({
       movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
@@ -22,4 +22,4 @@ const seeder = () => {
   }
 }
 
-module.exports = seeder;
+module.exports = randomSeeder;
