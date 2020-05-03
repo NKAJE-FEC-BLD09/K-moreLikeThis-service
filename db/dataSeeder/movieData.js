@@ -31,5 +31,22 @@ const movieData = [{
   similarMovies: similarMoviesSeeder()
 },
 {
-  
+  movieName: 'Wedding Crashers',
+  movieID: 4,
+  rating: 'R',
+  reviewScore: 6.9,
+  description: 'John Beckwith and Jeremy Grey, a pair of committed womanizers who sneak into weddings to take advantage of the romantic tinge in the air, find themselves at odds with one another when John meets and falls for Claire Cleary.',
+  director: 'David Dobkin',
+  stars: ['Owen Wilson', 'Vince Vaughn', 'Rachel McAdams'],
+  similarMovies: similarMoviesSeeder();
+},
+{
+  movieName: 'Face/Off',
+  movieID: 5,
+  rating: 'R',
+  reviewScore: 7.3,
+  description: 'In order to foil a terrorist plot, an FBI agent undergoes facial transplant surgery and assumes the identity of a criminal mastermind, who murdered his only son. The plan turns sour when the criminal wakes up prematurely and seeks revenge.',
+  director: 'John Woo',
+  stars: ['John Travoltoa', 'Nicolas Cage', 'Joan Allen'],
+  similarMovies: similarMoviesSeeder()
 }]
