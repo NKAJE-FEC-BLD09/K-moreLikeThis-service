@@ -1,5 +1,6 @@
 const Movie = require('../MovieSchema.js');
 const faker = require('faker');
+const ratingGen = require('./ratingGenerator.js');
 
 
 const seeder = () => {
@@ -7,7 +8,7 @@ const seeder = () => {
     const film = new Movie({
       movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
       movieID: i,
-      rating: /*random rating generator*/,
+      rating: ratingGen(),
       reviewScore: Math.floor(Math.random() * 11),
       description: String,
       director: String,
@@ -18,4 +19,4 @@ const seeder = () => {
   }
 }
 
-module.export = seeder;
+module.exports = seeder;
