@@ -1,5 +1,5 @@
 
-const similarMovies = () => {
+const similarMoviesSeeder = () => {
   const count = Math.floor((Math.random() * 7) + 5);
   let relatedMovies = [];
   for (let i = 0; i < count; i++) {
@@ -8,4 +8,4 @@ const similarMovies = () => {
   return relatedMovies;
 }
 
-module.exports = similarMovies
+module.exports = similarMoviesSeeder;

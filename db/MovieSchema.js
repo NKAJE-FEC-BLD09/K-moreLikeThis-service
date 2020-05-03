@@ -7,6 +7,7 @@ db.once('open', () => console.log('Connection made to database \'IMDb\''));
 const movieSchema = new mongoose.Schema({
   movieName: String,
   movieID: Number,
+  image: String,
   rating: String,
   reviewScore: Number,
   description: String,
