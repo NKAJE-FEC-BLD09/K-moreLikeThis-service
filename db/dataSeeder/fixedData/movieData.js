@@ -1,4 +1,4 @@
-const similarMoviesSeeder = require('./similarMoviesSeeder.js');
+const similarMoviesSeeder = require('../randomData/similarMoviesSeeder.js');
 
 const movieData = [{
   movieName: 'Rubber',
