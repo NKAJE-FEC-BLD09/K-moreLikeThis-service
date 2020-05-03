@@ -3,6 +3,7 @@ const faker = require('faker');
 const ratingGen = require('./ratingGenerator.js');
 const descriptonGen = require('./descriptionGenerator.js');
 const starsSeeder = require('./starsSeeder.js');
+const relatedMovies = require('./similarMoviesSeeder.js');
 
 
 const seeder = () => {
@@ -15,7 +16,7 @@ const seeder = () => {
       description: descriptonGen(),
       director: faker.fake('{{name.firstName}} {{name.lastName}}'),
       stars: starsSeeder(),
-      similarMovies: Array
+      similarMovies: relatedMovies()
     });
     film.save();
   }
