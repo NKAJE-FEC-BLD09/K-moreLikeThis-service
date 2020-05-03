@@ -11,7 +11,7 @@ const randomSeeder = () => {
     const film = new Movie({
       movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
       movieID: i,
-      image: 'stringggggggggggggggggggggggggg',
+      image: faker.fake('{{image.image}}'),
       rating: ratingGen(),
       reviewScore: Math.floor(Math.random() * 11),
       description: descriptonGen(),
