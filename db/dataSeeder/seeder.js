@@ -2,6 +2,7 @@ const Movie = require('../MovieSchema.js');
 const faker = require('faker');
 const ratingGen = require('./ratingGenerator.js');
 const descriptonGen = require('./descriptionGenerator.js');
+const starsSeeder = require('./starsSeeder.js');
 
 
 const seeder = () => {
@@ -12,8 +13,8 @@ const seeder = () => {
       rating: ratingGen(),
       reviewScore: Math.floor(Math.random() * 11),
       description: descriptonGen(),
-      director: String,
-      stars: Array,
+      director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+      stars: starsSeeder(),
       similarMovies: Array
     });
     film.save();
