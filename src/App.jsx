@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 
-const faker = require('faker');
+import Title from './components/Title.jsx';
+import LearnMore from './components/LearnMore.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-    <h1>More Like This</h1>
-    <div>{faker.fake("{{lorem.sentence}}")}</div>
+        <Title />
+        <LearnMore />
       </div>
     )}
 }
