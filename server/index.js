@@ -9,3 +9,7 @@ app.listen(port, () => console.log('Listening on port ', port));
 app.use(cors());
 app.use(bp.json());
 
+app.get('/movies/:ID', (req, res) => {
+  
+})
+
