@@ -4,6 +4,7 @@ import './App.css';
 import Title from './components/Title.jsx';
 import LearnMore from './components/LearnMore.jsx';
 import Description from './components/Description.jsx';
+import Carousel from './components/Carousel.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,7 +49,8 @@ class App extends React.Component {
       <div>
         <Title />
         <LearnMore />
-        <Description />
+        <Description state={this.state} />
+        <Carousel similar={this.state.similarMovies} />
       </div>
     )
   }
