@@ -10,8 +10,10 @@ app.listen(port, () => console.log('Listening on port ', port));
 app.use(cors());
 app.use(bp.json());
 
-app.get('/movies/:ID', (req, res) => {
-  getMovie(req);
-  res.send('hi');
-})
+app.get('/movies/:movieID', (req, res) => {
+  getMovie(req.params.movieID)
+  .then ( data => {
+    res.send(data);
+  })
+});
 
