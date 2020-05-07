@@ -3,6 +3,7 @@ const similarMoviesSeeder = require('../randomData/similarMoviesSeeder.js');
 const movieData = [{
   movieName: 'Rubber',
   movieID: 1,
+  year: 2010,
   image: 'https://imgur.com/2sEyFGt',
   rating: 'R',
   reviewScore: 5.8,
@@ -14,6 +15,7 @@ const movieData = [{
 {
   movieName: 'McLintock!',
   movieID: 2,
+  year: 1963,
   iamge: 'https://imgur.com/vSwK0MH',
   rating: 'Passed',
   reviewScore: 7.2,
@@ -25,6 +27,7 @@ const movieData = [{
 {
   movieName: 'Zoolander',
   movieID: 3,
+  year: 2001,
   image: 'https://imgur.com/Tc8u4OY',
   rating: 'PG-13',
   reviewScore: 6.5,
@@ -36,6 +39,7 @@ const movieData = [{
 {
   movieName: 'Wedding Crashers',
   movieID: 4,
+  year: 2005,
   iamge: 'https://imgur.com/GCMuQg9',
   rating: 'R',
   reviewScore: 6.9,
@@ -47,6 +51,7 @@ const movieData = [{
 {
   movieName: 'Face/Off',
   movieID: 5,
+  year: 1997,
   iamge: 'https://imgur.com/XoMYNGK',
   rating: 'R',
   reviewScore: 7.3,

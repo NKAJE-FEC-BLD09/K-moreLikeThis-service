@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       movieName: '',
       movieID: 0,
+      year: 0,
       image: '',
       rating: '',
       reviewScore: 0,
@@ -28,6 +29,7 @@ class App extends React.Component {
       this.setState({
         movieName: data.movieName,
         movieID: data.movieID,
+        year: data.year,
         image: data.image,
         rating: data.rating,
         reviewScore: data.revieScore,
