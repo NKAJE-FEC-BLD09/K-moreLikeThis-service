@@ -9,16 +9,32 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      movieName: '',
+      movieID: 0,
+      image: '',
+      rating: '',
+      reviewScore: 0,
+      description: '',
+      director: '',
+      stars: [],
+      similarMovies: []
     }
   }
 
   componentDidMount() {
-    fetch('http://localhost:8153/movies/1')
+    fetch(`http://localhost:8153/movies/1`)
+    .then( res => res.json())
     .then( data => {
-      data.json()
-      .then( movie => {
-        this.setState({/*movie data*/})
+      this.setState({
+        movieName: data.movieName,
+        movieID: data.movieID,
+        image: data.image,
+        rating: data.rating,
+        reviewScore: data.revieScore,
+        description: data.description,
+        director: data.director,
+        stars: data.stars,
+        similarMovies: data.similarMovies
       })
     })
   }
@@ -32,7 +48,8 @@ class App extends React.Component {
         <LearnMore />
         <Description />
       </div>
-    )}
+    )
+  }
 }
 
 export default App;
