@@ -9,5 +9,9 @@ describe('db test suite', () => {
       const result = getMovie('a');
        expect(result).to.equal(false);
     })
+    it('should return an object', () => {
+      const result = getMovie(1);
+      expect(result).to.be.an('object');
+    })
   })
 })
