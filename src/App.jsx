@@ -42,7 +42,7 @@ class App extends React.Component {
     })
   }
 
-  //functions
+  //functions 
 
   render() {
     return (
