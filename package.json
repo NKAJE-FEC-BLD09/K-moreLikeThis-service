@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "built test": "react-scripts test",
-    "test": "mocha",
+    "test": "mocha ./db/db.test.js",
     "eject": "react-scripts eject",
     "seed": "node ./db/dataSeeder/seeder.js",
     "server": "nodemon ./server/index.js"
