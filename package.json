@@ -24,8 +24,9 @@
     "build": "react-scripts build",
     "built test": "react-scripts test",
     "test-db": "mocha ./db",
-    "test-server": "mocha ./server/index.test.js",
+    "test-server": "mocha ./server",
     "test-client": "mocha ./src/components",
+    "test-all": "mocha ./db ./server ./src/components",
     "eject": "react-scripts eject",
     "seed": "node ./db/dataSeeder/seeder.js",
     "server": "nodemon ./server/index.js"
