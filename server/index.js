@@ -13,7 +13,10 @@ app.use(bp.json());
 app.get('/movies/:movieID', (req, res) => {
   getMovie(req.params.movieID)
   .then ( data => {
-    res.send(data);
+    res.status(201).send(data);
   })
+  .catch((err) => {
+    console.log(err);
+  });
 });
 
