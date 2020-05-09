@@ -13,11 +13,14 @@ app.use(bp.json());
 app.get('/movies/:movieID', (req, res) => {
   Movie.findOne({'movieID': req.params.movieID})
   .then((data) => {
-    console.log('here')
     res.status(201).send(data);
   })
   .catch((err) => {
     console.log(err);
   });
 });
+
+app.get('/movies', (req, res) => {
+  console.log(req.body);
+})
 

@@ -24,6 +24,17 @@ class App extends React.Component {
         similarMovies: data.similarMovies
       })
     })
+    .then( () => {
+      fetch('http://localhost:8153/movies', {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({movies: this.state.similarMovies})
+      })
+      .then( res => res.json())
+      .then( data => {
+        this.setState({similarMoviesData: data})
+      })
+    })
   }
 
   //functions
