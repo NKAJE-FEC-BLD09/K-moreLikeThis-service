@@ -1,0 +1,12 @@
+.description {
+  height: 265px;
+  position: absolute;
+  width: 360px;
+}
+
+.description-image {
+  border: none;
+  vertical-align: middle;
+  height: 190px;
+  width: 128px;
+}

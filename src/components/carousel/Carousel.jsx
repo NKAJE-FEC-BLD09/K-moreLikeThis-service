@@ -1,5 +1,6 @@
 import React from 'react';
 import Movie from '../movie/Movie.jsx';
+import './carousel.css';
 
 const Carousel = ( {movies} ) => {
   return (
