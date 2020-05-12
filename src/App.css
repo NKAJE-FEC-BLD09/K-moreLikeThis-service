@@ -4,9 +4,11 @@
   padding: 20px 21px 24px 20px;
   display: grid;
   grid-template-rows: 39.2px 1fr;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
 
 .descriptousel {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 55%;
 }
