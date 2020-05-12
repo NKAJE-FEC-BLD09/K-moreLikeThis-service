@@ -48,8 +48,8 @@ class App extends React.Component {
       <div>
         <Title />
         <LearnMore />
-        <Description state={this.state} />
-        <Carousel similar={this.state.similarMovies} />
+        <Description  />
+        <Carousel movies={ this.state.similarMoviesData } />
       </div>
     )
   }

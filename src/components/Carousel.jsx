@@ -1,11 +1,16 @@
 import React from 'react';
 import Movie from './Movie.jsx';
 
-const Carousel = ( {similar} ) => {
+const Carousel = ( { movies }  ) => {
+  console.log(movies.length)
   return (
-    similar.map( movie => (
-      <Movie key={movie} movie={movie} />
-    ))
+    <div className="carousel">
+  {movies.map( movie => {
+      return <Movie key={movie.movieID} movie={movie} />
+  })
+}
+  </div>
+
   )
 }
 
