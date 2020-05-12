@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Title from './components/title/Title.jsx';
-import LearnMore from './components/learnMore/LearnMore.jsx';
 import Description from './components/description/Description.jsx';
 import Carousel from './components/carousel/Carousel.jsx';
 
@@ -41,10 +40,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="more-like-this">
+        <div>
         <Title />
-        <LearnMore />
+        </div>
+        <div>
         <Description  />
         <Carousel movies={ this.state.similarMovies } />
+        </div>
       </div>
     )
   }

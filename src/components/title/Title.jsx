@@ -1,4 +1,5 @@
 import React from 'react';
+import LearnMore from './learnMore/LearnMore.jsx';
 import './title.css';
 
 const Title =(props) => (
