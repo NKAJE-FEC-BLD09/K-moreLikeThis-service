@@ -7,6 +7,7 @@ import Description from './components/Description.jsx';
 import Carousel from './components/Carousel.jsx';
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -25,16 +26,19 @@ class App extends React.Component {
       })
     })
     .then( () => {
-      fetch('http://localhost:8153/movies', {
-        method: 'GET',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({movies: this.state.similarMovies})
+      let movies = [];
+      this.state.similarMovies.forEach( movie => {
+        fetch(`http://localhost:8153/movies/${movie}`)
+        .then( res => res.json())
+        .then( data => {
+          movies.push(data)
+        })
       })
-      .then( res => res.json())
-      .then( data => {
-        this.setState({similarMoviesData: data})
-      })
+      return movies;
     })
+    .then( movies => {
+      this.setState({similarMoviesData: movies});
+    });
   }
 
   //functions

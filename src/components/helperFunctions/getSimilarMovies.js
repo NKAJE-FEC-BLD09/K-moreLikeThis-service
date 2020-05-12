@@ -1,12 +1,16 @@
+//not used because I needed this.setState incorporated
+
 
 const getSimilar = (arr) => {
-  fetch('http://localhost:8153/movies', {
-    method: 'GET',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({movies: arr})
+  let movies = [];
+  arr.forEach( movie => {
+    fetch(`http://localhost:8153/movies/${movie}`)
+    .then( res => res.json())
+    .then( data => {
+      movies.push(data)
+    })
   })
-  .then( res => res.json())
-  .then( data => {
-    this.setState({similarMoviesData: data})
-  })
-}
+  return movies;
+};
+
+module.exports = getSimilar;
