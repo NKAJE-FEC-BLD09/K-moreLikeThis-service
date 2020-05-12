@@ -27,6 +27,9 @@ class App extends React.Component {
         .then( res => res.json())
         .then( data => {
           let similarArr = this.state.similarMovies;
+          if(similarArr.length===6) { //remove me when I figure out how to make the page turn of the carousel
+            return;
+          }
           this.setState({similarMovies: [...similarArr, data]})
         })
       });
