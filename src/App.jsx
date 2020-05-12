@@ -43,9 +43,9 @@ class App extends React.Component {
         <div>
         <Title />
         </div>
-        <div>
-        <Description  />
+        <div className="descriptousel">
         <Carousel movies={ this.state.similarMovies } />
+        <Description  />
         </div>
       </div>
     )

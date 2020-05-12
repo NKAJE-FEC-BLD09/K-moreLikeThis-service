@@ -3,5 +3,10 @@
   width: 626px;
   padding: 20px 21px 24px 20px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 39.2px 1fr;
+}
+
+.descriptousel {
+  display: grid;
+  grid-template-columns: 45% 55%;
 }
