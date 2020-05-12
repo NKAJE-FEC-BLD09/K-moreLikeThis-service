@@ -11,34 +11,25 @@ import Carousel from './components/Carousel.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props)
+
     this.state = {
       similarMovies: [],
-      similarMoviesData: []
     }
   }
 
   componentDidMount() {
     fetch(`http://localhost:8153/movies/1`)
     .then( res => res.json())
-    .then( data => {
-      this.setState({
-        similarMovies: data.similarMovies
-      })
-    })
-    .then( () => {
-      let movies = [];
-      this.state.similarMovies.forEach( movie => {
+    .then( (data) => {
+      data.similarMovies.forEach( movie => {
         fetch(`http://localhost:8153/movies/${movie}`)
         .then( res => res.json())
         .then( data => {
-          movies.push(data)
+          let similarArr = this.state.similarMovies;
+          this.setState({similarMovies: [...similarArr, data]})
         })
-      })
-      return movies;
+      });
     })
-    .then( movies => {
-      this.setState({similarMoviesData: movies});
-    });
   }
 
   //functions
@@ -49,7 +40,7 @@ class App extends React.Component {
         <Title />
         <LearnMore />
         <Description  />
-        <Carousel movies={ this.state.similarMoviesData } />
+        <Carousel movies={ this.state.similarMovies } />
       </div>
     )
   }
