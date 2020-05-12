@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import Title from './components/Title.jsx';
-import LearnMore from './components/LearnMore.jsx';
-import Description from './components/Description.jsx';
-import Carousel from './components/Carousel.jsx';
+import Title from './components/title/Title.jsx';
+import LearnMore from './components/learnMore/LearnMore.jsx';
+import Description from './components/description/Description.jsx';
+import Carousel from './components/carousel/Carousel.jsx';
 
 
 
@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
+      currentMovie: [],
       similarMovies: [],
     }
   }
@@ -36,7 +37,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="more-like-this">
         <Title />
         <LearnMore />
         <Description  />

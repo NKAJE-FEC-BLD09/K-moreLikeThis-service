@@ -1,14 +1,13 @@
 import React from 'react';
-import Movie from './Movie.jsx';
+import Movie from '../movie/Movie.jsx';
 
-const Carousel = ( props ) => {
+const Carousel = ( {movies} ) => {
   return (
     <div className="carousel">
-      {props.movies.map(movie =>
+      {movies.map(movie =>
         <Movie key={movie.movieID} movie={movie} />
       )}
     </div>
-
   )
 }
 
