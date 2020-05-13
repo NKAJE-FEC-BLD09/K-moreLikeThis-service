@@ -5,6 +5,7 @@ const descriptonGen = require('./descriptionGenerator.js');
 const starsSeeder = require('./starsSeeder.js');
 const similarMoviesSeeder = require('./similarMoviesSeeder.js');
 const randomYear = require('./randomYear.js');
+const imageSeeder = require('./imageSeeder.js');
 
 
 const randomSeeder = () => {
@@ -13,7 +14,7 @@ const randomSeeder = () => {
       movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
       movieID: i,
       year: randomYear(),
-      image: faker.fake('{{image.image}}'),
+      image: imageSeeder(),
       rating: ratingGen(),
       reviewScore: Math.floor(Math.random() * 11),
       description: descriptonGen(),
