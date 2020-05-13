@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './description.css';
 
-const descriptionWords = () => (
+const DescriptionWords = ({ movie }) => (
   <div>hi</div>
 );
 
-export default descriptionWords;
+DescriptionWords.propTypes = {
+  movie: PropTypes.shape({}).isRequired,
+};
+
+export default DescriptionWords;
