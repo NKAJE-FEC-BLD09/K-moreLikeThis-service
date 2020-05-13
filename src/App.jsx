@@ -16,7 +16,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const { similarMovies } = this.state;
     fetch('http://localhost:8153/movies/1')
       .then((res) => res.json())
       .then((data) => {
@@ -24,11 +23,11 @@ class App extends React.Component {
           fetch(`http://localhost:8153/movies/${movie}`)
             .then((res) => res.json())
             .then((newData) => {
-              const similarArr = similarMovies;
-              if (similarArr.length === 6) {
+              const { similarMovies } = this.state;
+              if (similarMovies.length === 6) {
                 return;
               }
-              this.setState({ similarMovies: [...similarArr, newData] });
+              this.setState({ similarMovies: [...similarMovies, newData] });
             });
         });
       });
