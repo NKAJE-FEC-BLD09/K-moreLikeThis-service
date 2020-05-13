@@ -10,5 +10,16 @@
 
 .descriptousel {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 40% 1fr;
+}
+
+
+
+
+.navBar {
+  height: 13px;
+  position: absolute;
+  text-align: center;
+  top: 248px;
+  width: 100%;
 }

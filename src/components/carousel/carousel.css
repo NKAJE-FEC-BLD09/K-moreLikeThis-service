@@ -7,3 +7,25 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
+.navBar {
+  height: 13px;
+  position: relative;
+  text-align: center;
+  top: 248px;
+  width: 100%;
+}
+
+.navRight {
+  cursor: pointer;
+  line-height: 13px;
+  position: absolute;
+  left: 128px;
+}
+
+.navLeft {
+  cursor: pointer;
+  line-height: 13px;
+  position: absolute;
+  right: 128px;
+}

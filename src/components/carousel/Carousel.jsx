@@ -5,9 +5,14 @@ import './carousel.css';
 
 
 const Carousel = ({ movies }) => (
-
-  <div className="carousel">
-    {movies.map((movie) => <Movie key={movie.movieID} movie={movie} />)}
+  <div>
+    <div className="carousel">
+      {movies.map((movie) => <Movie key={movie.movieID} movie={movie} />)}
+    </div>
+    <div className="navBar">
+      <a className="navLeft" href="something">prev</a>
+      <a className="navRight" href="something">next</a>
+    </div>
   </div>
 );
 

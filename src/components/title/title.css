@@ -1,6 +1,6 @@
 .title {
   height: 27.2px;
-  width: 626px;
+  width: 560px;
   margin-bottom: 12px;
   margin-top: 1px;
   font: 24px Arial, sans-serif;
@@ -9,11 +9,12 @@
 }
 
 .learnMore {
+  text-decoration: none;
   color: #70579D;
   font-size: 11px;
   float: right;
-  margin: -10px 0 10px;
-  padding: 10px 0 1px 7px;
+  margin: -10px 0 0 0px;
+  padding: 10px 0 1px 3px;
   border-left: 1px dotted #ccc;
 }
 
