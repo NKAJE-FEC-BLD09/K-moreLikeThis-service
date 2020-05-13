@@ -45,7 +45,7 @@ class App extends React.Component {
           <div className="carouNav">
             <Carousel movies={similarMovies} />
           </div>
-          <div>
+          <div className="descriptionBox">
             <Description />
           </div>
         </div>

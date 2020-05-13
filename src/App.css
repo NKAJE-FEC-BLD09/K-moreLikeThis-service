@@ -6,20 +6,19 @@
   grid-template-rows: 39.2px 1fr;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
+  border-right: 1px solid orangered;
 }
 
 .descriptousel {
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 41% 1fr;
 }
 
+.carouNav {
+  position: relative;
+}
 
-
-
-.navBar {
-  height: 13px;
-  position: absolute;
-  text-align: center;
-  top: 248px;
-  width: 100%;
+.descriptionBox {
+  display: grid;
+  grid-template-columns: 40% 1fr;
 }
