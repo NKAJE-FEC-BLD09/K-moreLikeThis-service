@@ -16,6 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const { similarMovies } = this.state;
     fetch('http://localhost:8153/movies/1')
       .then((res) => res.json())
       .then((data) => {
@@ -23,8 +24,8 @@ class App extends React.Component {
           fetch(`http://localhost:8153/movies/${movie}`)
             .then((res) => res.json())
             .then((newData) => {
-              const similarArr = this.state.similarMovies;
-              if (similarArr.length === 6) { //remove me when carousel
+              const similarArr = similarMovies;
+              if (similarArr.length === 6) {
                 return;
               }
               this.setState({ similarMovies: [...similarArr, newData] });
@@ -35,6 +36,7 @@ class App extends React.Component {
 
 
   render() {
+    const { similarMovies } = this.state;
     return (
       <div className="more-like-this">
         <div>
@@ -42,7 +44,7 @@ class App extends React.Component {
         </div>
         <div className="descriptousel">
           <div>
-            <Carousel movies={this.state.similarMovies} />
+            <Carousel movies={similarMovies} />
           </div>
           <div>
             <Description />
