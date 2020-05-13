@@ -4,7 +4,7 @@ const similarMoviesSeeder = () => {
   const relatedMovies = [];
   for (let i = 0; i < count; i += 1) {
     let related = Math.floor(Math.random() * 101);
-    while (relatedMovies.indexOf(related) === -1) {
+    while (relatedMovies.indexOf(related) > -1) {
       related = Math.floor(Math.random() * 101);
     }
     relatedMovies.push(related);

@@ -3,9 +3,11 @@ import LearnMore from './learnMore/LearnMore';
 import './title.css';
 
 const Title = () => (
-  <div>
+  <div className="titleBox">
     <h2 className="title">More Like This</h2>
-    <LearnMore />
+    <div className="learnMore">
+      <LearnMore />
+    </div>
   </div>
 );
 
