@@ -9,7 +9,7 @@ const Movie = ({ movie }) => (
 );
 
 Movie.propTypes = {
-  movie: PropTypes.arrayOf(PropTypes.object).isRequired,
+  movie: PropTypes.shape({ image: PropTypes.string.isRequired }).isRequired,
 };
 
 export default Movie;
