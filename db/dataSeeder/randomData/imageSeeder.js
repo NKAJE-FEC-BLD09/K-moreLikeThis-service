@@ -31,9 +31,21 @@ const imageSeeder = () => {
     'https://i.imgur.com/vSwK0MH.jpg',
     'https://i.imgur.com/GCMuQg9.jpg',
     'https://i.imgur.com/2sEyFGt.jpg',
+    'https://i.imgur.com/XKUdviS.jpg',
+    'https://i.imgur.com/jee0w0i.jpg',
+    'https://i.imgur.com/l7KuE4X.jpg',
+    'https://i.imgur.com/2NkPcHB.jpg',
+    'https://i.imgur.com/PXUcYyb.jpg',
+    'https://i.imgur.com/vYoc47i.jpg',
+    'https://i.imgur.com/Ld8cGdi.jpg',
+    'https://i.imgur.com/VOsWoC3.jpg',
+    'https://i.imgur.com/QLAh53v.jpg',
+    'https://i.imgur.com/BEUllsg.jpg',
+    'https://i.imgur.com/HbpXdx1.jpg',
+    'https://i.imgur.com/HbpXdx1.jpg',
   ];
 
-  return photoArr[Math.floor(Math.random() * 30)];
+  return photoArr[Math.floor(Math.random() * 42)];
 };
 
 module.exports = imageSeeder;
