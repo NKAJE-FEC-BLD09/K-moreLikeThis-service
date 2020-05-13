@@ -1,5 +1,5 @@
-const Movie = require('../../MovieSchema.js');
 const faker = require('faker');
+const Movie = require('../../MovieSchema.js');
 const ratingGen = require('./ratingGenerator.js');
 const descriptonGen = require('./descriptionGenerator.js');
 const starsSeeder = require('./starsSeeder.js');
@@ -8,7 +8,7 @@ const randomYear = require('./randomYear.js');
 
 
 const randomSeeder = () => {
-  for (let i = 6; i <= 100; i++) {
+  for (let i = 6; i <= 100; i + 1) {
     const film = new Movie({
       movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
       movieID: i,
@@ -19,10 +19,10 @@ const randomSeeder = () => {
       description: descriptonGen(),
       director: faker.fake('{{name.firstName}} {{name.lastName}}'),
       stars: starsSeeder(),
-      similarMovies: similarMoviesSeeder()
+      similarMovies: similarMoviesSeeder(),
     });
     film.save();
   }
-}
+};
 
 module.exports = randomSeeder;

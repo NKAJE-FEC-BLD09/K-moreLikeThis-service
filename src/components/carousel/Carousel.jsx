@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Movie from '../movie/Movie';
 import './carousel.css';
+
 
 const Carousel = ({ movies }) => (
 
@@ -10,7 +12,7 @@ const Carousel = ({ movies }) => (
 );
 
 Carousel.propTypes = {
-  movies: PropTypes.array.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Carousel;
