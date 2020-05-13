@@ -17,8 +17,3 @@
 .carouNav {
   position: relative;
 }
-
-.descriptionBox {
-  display: grid;
-  grid-template-columns: 40% 1fr;
-}

@@ -11,3 +11,9 @@
   width: 128px;
   box-shadow: 0 3px 5px rgb(153, 150, 150);
 }
+
+.descriptionSplit {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  height: 265px;
+}

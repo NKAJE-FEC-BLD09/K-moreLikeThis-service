@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Title from './components/title/Title';
-import Description from './components/description/Description';
+import Description from './components/description/DescriptionImage';
 import Carousel from './components/carousel/Carousel';
 
 
@@ -46,7 +46,7 @@ class App extends React.Component {
             <Carousel movies={similarMovies} />
           </div>
           <div className="descriptionBox">
-            <Description />
+            <Description movie={similarMovies[0]} />
           </div>
         </div>
       </div>
