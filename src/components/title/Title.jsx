@@ -1,12 +1,12 @@
 import React from 'react';
-import LearnMore from './learnMore/LearnMore.jsx';
+import LearnMore from './learnMore/LearnMore';
 import './title.css';
 
-const Title =(props) => (
+const Title = () => (
   <div>
-  <h2 className="title">More Like This</h2>
-  <LearnMore />
+    <h2 className="title">More Like This</h2>
+    <LearnMore />
   </div>
-)
+);
 
 export default Title;
