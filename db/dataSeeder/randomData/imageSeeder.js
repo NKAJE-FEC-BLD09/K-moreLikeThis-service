@@ -45,7 +45,7 @@ const imageSeeder = () => {
     'https://i.imgur.com/HbpXdx1.jpg',
   ];
 
-  return photoArr[Math.floor(Math.random() * 42)];
+  return photoArr[Math.floor(Math.random() * 43)];
 };
 
 module.exports = imageSeeder;
