@@ -59,7 +59,7 @@
 }
 
 .ringo-star {
-  width: 198px;
+  width: 170px;
   height: 13px;
   text-align: left;
   box-sizing: content-box;
@@ -67,7 +67,6 @@
   border: 1px solid #efefef;
   border-radius: 6px;
   font-size: 16px;
-  text-align: justify;
 }
 
 .divisor {
@@ -81,5 +80,10 @@
   color: #a58600;
   font-size: 11px;
   font-weight: bolder;
+  align-content: center;
+  position: relative; top: -11px; left: 5px
 }
 
+.dv-star-rating {
+  position: relative; top: -6px;
+}

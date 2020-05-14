@@ -10,7 +10,6 @@ const ReviewScore = ({ reviewScore }) => {
   return (
     <div className="ringo-star">
       <StarRatingComponent
-        className="stars"
         name="rating"
         starCount={10}
         value={reviewScore}
