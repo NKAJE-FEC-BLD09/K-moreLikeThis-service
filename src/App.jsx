@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Title from './components/title/Title';
-import Description from './components/description/Description';
+import DescriptionImage from './components/description/DescriptionImage';
 import Carousel from './components/carousel/Carousel';
 
 
@@ -12,6 +12,7 @@ class App extends React.Component {
 
     this.state = {
       similarMovies: [],
+      descriptionMovie: {},
     };
   }
 
@@ -27,7 +28,10 @@ class App extends React.Component {
               if (similarMovies.length === 6) {
                 return;
               }
-              this.setState({ similarMovies: [...similarMovies, newData] });
+              this.setState({
+                similarMovies: [...similarMovies, newData],
+                descriptionMovie: newData,
+              });
             });
         });
       });
@@ -35,7 +39,7 @@ class App extends React.Component {
 
 
   render() {
-    const { similarMovies } = this.state;
+    const { similarMovies, descriptionMovie } = this.state;
     return (
       <div className="more-like-this">
         <div>
@@ -46,7 +50,7 @@ class App extends React.Component {
             <Carousel movies={similarMovies} />
           </div>
           <div className="descriptionBox">
-            <Description />
+            <DescriptionImage movie={descriptionMovie} />
           </div>
         </div>
       </div>

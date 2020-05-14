@@ -11,7 +11,7 @@ const imageSeeder = require('./imageSeeder.js');
 const randomSeeder = () => {
   for (let i = 6; i <= 100; i += 1) {
     const film = new Movie({
-      movieName: faker.fake('{{name.firstName}} {{name.lastName}}'),
+      movieName: faker.fake('{{name.title}}'),
       movieID: i,
       year: randomYear(),
       image: imageSeeder(),
@@ -21,6 +21,7 @@ const randomSeeder = () => {
       director: faker.fake('{{name.firstName}} {{name.lastName}}'),
       stars: starsSeeder(),
       similarMovies: similarMoviesSeeder(),
+      genre: faker.fake('{{lorem.word}}'),
     });
     film.save();
   }

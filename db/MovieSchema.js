@@ -16,6 +16,7 @@ const movieSchema = new mongoose.Schema({
   director: String,
   stars: Array,
   similarMovies: Array,
+  genre: String,
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
