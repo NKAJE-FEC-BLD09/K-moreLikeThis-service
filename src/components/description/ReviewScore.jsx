@@ -15,6 +15,7 @@ const ReviewScore = ({ reviewScore }) => {
         value={reviewScore}
         onStarClick={onStarClick}
         starColor="#a58600"
+        emptyStarColor="#efefef"
       />
       <span className="score">
         {reviewScore}

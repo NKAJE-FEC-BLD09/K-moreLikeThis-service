@@ -14,7 +14,7 @@
 
 .descriptionSplit {
   display: grid;
-  grid-template-columns: 38% 1fr;
+  grid-template-columns: 40% 1fr;
   height: 265px;
 }
 
@@ -86,4 +86,8 @@
 
 .dv-star-rating {
   position: relative; top: -6px;
+}
+
+.description-paragraph {
+  font-family: Verdana, Arial, sans-serif;
 }
