@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import './description.css';
 
 const DescriptionWords = ({ movie }) => (
-  <div className="description-title">
-    <a className="movie-title" href="link">{movie.movieName}</a>
-    <span className="movie-year">
-      (
-      {movie.year}
-      )
-    </span>
+  <div>
+    <div className="description-title">
+      <a className="movie-title" href="link">{movie.movieName}</a>
+      <span className="movie-year">
+        (
+        {movie.year}
+        )
+      </span>
+    </div>
+    <div className="description-infos">
+      <span className="rating">R</span>
+      <span className="genre">{movie.genre}</span>
+    </div>
   </div>
 );
 

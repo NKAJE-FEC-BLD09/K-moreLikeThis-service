@@ -15,7 +15,7 @@ const Description = ({ movie }) => (
 );
 
 Description.propTypes = {
-  movie: PropTypes.shape({image: PropTypes.string}).isRequired,
+  movie: PropTypes.shape({ image: PropTypes.string }).isRequired,
 };
 
 export default Description;
