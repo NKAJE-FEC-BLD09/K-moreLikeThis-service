@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import ReviewScore from './ReviewScore';
 import './description.css';
 
+const starsLimitter = require('./starsLimitter.js');
+
 const DescriptionWords = ({ movie }) => (
   <div>
     <div className="description-title">
@@ -21,6 +23,16 @@ const DescriptionWords = ({ movie }) => (
     <p className="description-paragraph">
       {movie.description}
     </p>
+    <div className="directors-stars">
+      <div className="director">
+        <span className="directors-stars-bold">Director: </span>
+        <span className="directors-stars-norm">{movie.director}</span>
+      </div>
+      <div className="actors">
+        <span className="directors-stars-bold">Stars: </span>
+        <span className="directors-stars-norm">{starsLimitter(movie.stars)}</span>
+      </div>
+    </div>
   </div>
 );
 
