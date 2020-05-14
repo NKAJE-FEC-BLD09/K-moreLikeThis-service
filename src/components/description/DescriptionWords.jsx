@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReviewScore from './ReviewScore';
 import './description.css';
 
 const DescriptionWords = ({ movie }) => (
@@ -13,9 +14,10 @@ const DescriptionWords = ({ movie }) => (
       </span>
     </div>
     <div className="description-infos">
-      <span className="rating">R</span>
+      <span className="rating">{movie.rating}</span>
       <span className="genre">{movie.genre}</span>
     </div>
+    <ReviewScore reviewScore={movie.reviewScore} />
   </div>
 );
 
