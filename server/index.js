@@ -9,7 +9,7 @@ const port = 8153;
 app.listen(port, () => console.log('Listening on port ', port));
 app.use(cors());
 app.use(bp.json());
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 app.get('/movies/:movieID', (req, res) => {
   Movie.findOne({ movieID: req.params.movieID })
