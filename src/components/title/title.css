@@ -9,7 +9,6 @@
 }
 
 .learnMore {
-  text-decoration: none;
   color: #70579D;
   font-size: 11px;
   float: right;
@@ -20,5 +19,10 @@
 
 .titleBox {
   display: grid;
-  grid-template-columns: 1fr 10%;
+  grid-template-columns: 1fr 11%;
+}
+
+.a {
+  text-decoration: none;
+  font-family: Verdana, Arial, sans-serif;
 }
