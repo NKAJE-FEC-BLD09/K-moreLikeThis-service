@@ -20,20 +20,20 @@ class App extends React.Component {
     fetch('http://localhost:8153/movies/1')
       .then((res) => res.json())
       .then((data) => {
+        let movieArr = [];
         data.similarMovies.forEach((movie) => {
           fetch(`http://localhost:8153/movies/${movie}`)
             .then((res) => res.json())
-            .then((newData) => {
-              const { similarMovies } = this.state;
-              if (similarMovies.length === 6) {
-                return;
-              }
+            .then((newData) => (
+              movieArr.push(newData)
+            )
+            .then((movieArr) => {
               this.setState({
-                similarMovies: [...similarMovies, newData],
-                descriptionMovie: newData,
-              });
+                similarMovies: movieArr,
+                descriptionMovie: movieArr[0]
+              })
             });
-        });
+        );
       });
   }
 
