@@ -5,11 +5,11 @@ import './description.css';
 const DescriptionWords = ({ movie }) => (
   <div className="description-title">
     <a className="movie-title" href="link">{movie.movieName}</a>
-    <div className="movie-year">
+    <span className="movie-year">
       (
       {movie.year}
       )
-    </div>
+    </span>
   </div>
 );
 

@@ -6,7 +6,7 @@ import './description.css';
 const Description = ({ movie }) => (
   <div className="descriptionSplit">
     <div className="image-watchlist">
-      <img className="description-image" src="https://upload.wikimedia.org/wikipedia/en/3/31/The_SpongeBob_SquarePants_Movie_poster.jpg" alt="spongeBob" />
+      <img className="description-image" src={movie.image} alt="spongeBob" />
     </div>
     <div className="description-words">
       <DescriptionWords movie={movie} />
@@ -15,7 +15,7 @@ const Description = ({ movie }) => (
 );
 
 Description.propTypes = {
-  movie: PropTypes.shape({}).isRequired,
+  movie: PropTypes.shape({image: PropTypes.string}).isRequired,
 };
 
 export default Description;

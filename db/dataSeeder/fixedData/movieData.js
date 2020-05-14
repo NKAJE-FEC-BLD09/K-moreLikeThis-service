@@ -11,6 +11,7 @@ const movieData = [{
   director: 'Quentin Dupieux',
   stars: ['Stephen Spinella', 'Roxane Mesquida', 'Wings Hauser'],
   similarMovies: similarMoviesSeeder(),
+  genre: 'Horror',
 },
 {
   movieName: 'McLintock!',
@@ -23,6 +24,7 @@ const movieData = [{
   director: 'Anderw V. McLeaglen',
   stars: ['John Wayne', 'Maureen O\'Hara', 'Patrick Wayne'],
   similarMovies: similarMoviesSeeder(),
+  genre: 'Westerm',
 },
 {
   movieName: 'Zoolander',
@@ -35,6 +37,7 @@ const movieData = [{
   director: 'Ben Stiller',
   stars: ['Ben Stiller', 'Owen Wilson', 'Christine Taylor'],
   similarMovies: similarMoviesSeeder(),
+  genre: 'Comedy',
 },
 {
   movieName: 'Wedding Crashers',
@@ -47,6 +50,7 @@ const movieData = [{
   director: 'David Dobkin',
   stars: ['Owen Wilson', 'Vince Vaughn', 'Rachel McAdams'],
   similarMovies: similarMoviesSeeder(),
+  genre: 'Comedy',
 },
 {
   movieName: 'Face/Off',
@@ -59,6 +63,7 @@ const movieData = [{
   director: 'John Woo',
   stars: ['John Travoltoa', 'Nicolas Cage', 'Joan Allen'],
   similarMovies: similarMoviesSeeder(),
+  genre: 'Sci-Fi',
 }];
 
 module.exports = movieData;
