@@ -17,7 +17,7 @@ const Description = ({ movie }) => (
     <div className="add-to-watch">
       {watchList}
     </div>
-    <div className="next">
+    <div className="next" href="https://www.youtube.com/watch?v=cQ_b4_lw0Gg">
       {next}
     </div>
   </div>

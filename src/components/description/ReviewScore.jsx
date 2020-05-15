@@ -5,7 +5,7 @@ import './description.css';
 
 const ReviewScore = ({ reviewScore }) => {
   const onStarClick = () => {
-
+    alert('DANGER WILL ROBINSON');
   };
   return (
     <div className="ringo-star">
