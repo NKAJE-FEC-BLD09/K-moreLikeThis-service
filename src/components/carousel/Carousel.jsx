@@ -13,15 +13,15 @@ class Carousel extends Component {
   }
 
   render() {
-    const { movies } = this.props;
+    const { movies, onNext6Click, onPrev6Click } = this.props;
     return (
       <div>
         <div className="carousel">
           {movies.map((movie) => <Movie key={movie.movieID} movie={movie} />)}
         </div>
         <div className="navBar">
-          <a className="navLeft" href="something">prev</a>
-          <a className="navRight" href="something">next</a>
+          <a className="navLeft" href="something" onClick={(e) => onPrev6Click(e)}>prev</a>
+          <a className="navRight" href="something" onClick={(e) => onNext6Click(e)}>next</a>
         </div>
       </div>
     );
@@ -30,6 +30,8 @@ class Carousel extends Component {
 
 Carousel.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onNext6Click: PropTypes.func.isRequired,
+  onPrev6Click: PropTypes.func.isRequired,
 };
 
 export default Carousel;
