@@ -14,8 +14,6 @@ body {
   display: grid;
   grid-template-rows: 39.2px 1fr;
   border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-right: 1px solid orangered;
 }
 
 .descriptousel {
