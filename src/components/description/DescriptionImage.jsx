@@ -7,6 +7,7 @@ const watchList = React.createElement('button', { type: 'button' }, 'Add to Watc
 const next = React.createElement('button', { type: 'button' }, 'next');
 
 const Description = ({ movie }) => (
+
   <div className="descriptionSplit">
     <div className="image-watchlist">
       <img className="description-image" src={movie.image} alt="spongeBob" />

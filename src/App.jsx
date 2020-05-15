@@ -41,16 +41,18 @@ class App extends React.Component {
   render() {
     const { similarMovies, descriptionMovie } = this.state;
     return (
-      <div className="more-like-this">
-        <div>
-          <Title />
-        </div>
-        <div className="descriptousel">
-          <div className="carouNav">
-            <Carousel movies={similarMovies.slice(0, 6)} />
+      <div className="cont">
+        <div className="more-like-this">
+          <div>
+            <Title />
           </div>
-          <div className="descriptionBox">
-            <DescriptionImage movie={descriptionMovie} />
+          <div className="descriptousel">
+            <div className="carouNav">
+              <Carousel movies={similarMovies.slice(0, 6)} />
+            </div>
+            <div className="descriptionBox">
+              <DescriptionImage movie={descriptionMovie} />
+            </div>
           </div>
         </div>
       </div>
