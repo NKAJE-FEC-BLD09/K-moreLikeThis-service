@@ -15,6 +15,7 @@ class App extends React.Component {
       carouselLocation: 'L',
       carouselMovies: [],
       descriptionMovie: {},
+      descriptionIndex: 0,
     };
     this.onPrev6Click = this.onPrev6Click.bind(this);
     this.onNext6Click = this.onNext6Click.bind(this);
@@ -51,6 +52,7 @@ class App extends React.Component {
         carouselLocation: 'L',
         carouselMovies: similarMovies.slice(0, 6),
         descriptionMovie: similarMovies[0],
+        descriptionIndex: 0,
       });
     }
   }
@@ -58,18 +60,33 @@ class App extends React.Component {
   onNext6Click(e) {
     e.preventDefault();
     const { carouselLocation, similarMovies } = this.state;
+    const index = 7;
     if (carouselLocation === 'L') {
       this.setState({
         carouselLocation: 'R',
-        carouselMovies: similarMovies.slice(7, 12),
-        descriptionMovie: similarMovies[7],
+        carouselMovies: similarMovies.slice(6, 13),
+        descriptionMovie: similarMovies[index],
+        descriptionIndex: index,
       });
     }
   }
 
   onNextButtClick(e) {
     e.preventDefault();
-    console.log('hi');
+    const { descriptionIndex, similarMovies } = this.state;
+    console.log(descriptionIndex)
+    if (descriptionIndex + 1 < 6) {
+      this.setState({
+        descriptionIndex: descriptionIndex + 1,
+        descriptionMovie: similarMovies[descriptionIndex + 1],
+      });
+    } else if (descriptionIndex + 1 > 5 && descriptionIndex + 1 < similarMovies.length) {
+      this.setState({
+        descriptionIndex: descriptionIndex + 1,
+        descriptionMovie: similarMovies[descriptionIndex + 1],
+        carouselMovies: similarMovies.slice(6, 13),
+      });
+    }
   }
 
 
