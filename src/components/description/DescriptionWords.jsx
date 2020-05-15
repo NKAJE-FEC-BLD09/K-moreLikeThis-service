@@ -30,7 +30,7 @@ const DescriptionWords = ({ movie }) => (
       </div>
       <div className="actors">
         <span className="directors-stars-bold">Stars: </span>
-        <span className="directors-stars-norm">{starsLimitter(movie.stars)}</span>
+        <span className="directors-stars-norm">{movie.stars}</span>
       </div>
     </div>
   </div>

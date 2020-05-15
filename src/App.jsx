@@ -20,17 +20,17 @@ class App extends React.Component {
     fetch('http://localhost:8153/movies/1')
       .then((res) => res.json())
       .then((data) => {
+        const movieArr = [];
         data.similarMovies.forEach((movie) => {
           fetch(`http://localhost:8153/movies/${movie}`)
             .then((res) => res.json())
             .then((newData) => {
-              const { similarMovies } = this.state;
-              if (similarMovies.length === 6) {
-                return;
-              }
+              movieArr.push(newData);
+            })
+            .then(() => {
               this.setState({
-                similarMovies: [...similarMovies, newData],
-                descriptionMovie: newData,
+                similarMovies: movieArr,
+                descriptionMovie: movieArr[0],
               });
             });
         });
@@ -47,7 +47,7 @@ class App extends React.Component {
         </div>
         <div className="descriptousel">
           <div className="carouNav">
-            <Carousel movies={similarMovies} />
+            <Carousel movies={similarMovies.slice(0, 6)} />
           </div>
           <div className="descriptionBox">
             <DescriptionImage movie={descriptionMovie} />
