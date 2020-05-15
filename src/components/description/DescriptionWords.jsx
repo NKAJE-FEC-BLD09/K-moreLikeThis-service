@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReviewScore from './ReviewScore';
+import starsLimitter from './starsLimitter';
 import './description.css';
-
-const starsLimitter = require('./starsLimitter.js');
 
 const DescriptionWords = ({ movie }) => (
   <div>
@@ -30,7 +29,7 @@ const DescriptionWords = ({ movie }) => (
       </div>
       <div className="actors">
         <span className="directors-stars-bold">Stars: </span>
-        <span className="directors-stars-norm">{movie.stars}</span>
+        <span className="directors-stars-norm">{starsLimitter(movie.stars)}</span>
       </div>
     </div>
   </div>

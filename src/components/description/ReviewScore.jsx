@@ -4,7 +4,7 @@ import StarRatingComponent from 'react-star-rating-component';
 import './description.css';
 
 const ReviewScore = ({ reviewScore }) => {
-  const onStarClick = (e) => {
+  const onStarClick = () => {
 
   };
   return (

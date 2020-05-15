@@ -1,6 +1,9 @@
 const starsLimitter = (array) => {
-  const string = array.join(', ');
-  return `${string.slice(0, 30)} ...`;
+  if (array) {
+    const string = `${array.join(', ').slice(0, 25)} ...`;
+    return string;
+  }
+  return null;
 };
 
-module.exports = starsLimitter;
+export default starsLimitter;
