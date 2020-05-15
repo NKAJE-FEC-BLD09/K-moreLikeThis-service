@@ -74,7 +74,6 @@ class App extends React.Component {
   onNextButtClick(e) {
     e.preventDefault();
     const { descriptionIndex, similarMovies } = this.state;
-    console.log(descriptionIndex)
     if (descriptionIndex + 1 < 6) {
       this.setState({
         descriptionIndex: descriptionIndex + 1,
