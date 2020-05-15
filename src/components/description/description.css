@@ -101,3 +101,29 @@
 .directors-stars-bold {
   font-weight: bolder;
 }
+
+.add-to-watch button {
+  font-family: Verdana, Arial, sans-serif;
+  position: relative;
+  top: -18px;
+  width: 126px;
+  height: 21px;
+  background: linear-gradient(#fefcea, #F3CE00);
+  border-color: #D5AB55 #c93 #c93 #D5AB55;
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.next button {
+  font-family: Verdana, Arial, sans-serif;
+  text-align: left;
+  position: relative;
+  height: 21px;
+  width: 56px;
+  top: 7px;
+  left: -80px;
+}

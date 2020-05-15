@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import DescriptionWords from './DescriptionWords';
 import './description.css';
 
+const watchList = React.createElement('button', { type: 'button' }, 'Add to Watchlist');
+const next = React.createElement('button', { type: 'button' }, 'next');
+
 const Description = ({ movie }) => (
   <div className="descriptionSplit">
     <div className="image-watchlist">
@@ -10,6 +13,12 @@ const Description = ({ movie }) => (
     </div>
     <div className="description-words">
       <DescriptionWords movie={movie} />
+    </div>
+    <div className="add-to-watch">
+      {watchList}
+    </div>
+    <div className="next">
+      {next}
     </div>
   </div>
 );
