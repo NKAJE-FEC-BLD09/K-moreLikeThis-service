@@ -20,7 +20,7 @@ const Description = ({ movie, onNextButtClick }) => (
     </div>
     <div
       className="next"
-      href="https://www.youtube.com/watch?v=cQ_b4_lw0Gg"
+      role="presentation"
       onClick={(e) => onNextButtClick(e)}
     >
       {next}
