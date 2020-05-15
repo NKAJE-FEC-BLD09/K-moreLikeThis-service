@@ -47,21 +47,29 @@ class App extends React.Component {
     e.preventDefault();
     const { carouselLocation, similarMovies } = this.state;
     if (carouselLocation === 'R') {
-      this.setState({ carouselLocation: 'L', carouselMovies: similarMovies.slice(0, 6) });
+      this.setState({
+        carouselLocation: 'L',
+        carouselMovies: similarMovies.slice(0, 6),
+        descriptionMovie: similarMovies[0],
+      });
     }
   }
 
   onNext6Click(e) {
-    console.log('hi')
     e.preventDefault();
     const { carouselLocation, similarMovies } = this.state;
     if (carouselLocation === 'L') {
-      this.setState({ carouselLocation: 'R', carouselMovies: similarMovies.slice(7, 12) });
+      this.setState({
+        carouselLocation: 'R',
+        carouselMovies: similarMovies.slice(7, 12),
+        descriptionMovie: similarMovies[7],
+      });
     }
   }
 
-  onNextButtClick() {
-
+  onNextButtClick(e) {
+    e.preventDefault();
+    console.log('hi');
   }
 
 
@@ -82,7 +90,10 @@ class App extends React.Component {
               />
             </div>
             <div className="descriptionBox">
-              <DescriptionImage movie={descriptionMovie} />
+              <DescriptionImage
+                movie={descriptionMovie}
+                onNextButtClick={this.onNextButtClick}
+              />
             </div>
           </div>
         </div>
