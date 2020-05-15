@@ -3,6 +3,10 @@ body {
   color: #333333;
 }
 
+.cont {
+  display: inline;
+}
+
 .more-like-this {
   height: 304.2px;
   width: 626px;
