@@ -4,7 +4,7 @@ body {
 }
 
 .cont {
-  display: inline;
+  display: block;
 }
 
 .more-like-this {
