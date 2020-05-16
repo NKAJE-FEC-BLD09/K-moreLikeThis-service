@@ -20,6 +20,7 @@ class App extends React.Component {
     this.onPrev6Click = this.onPrev6Click.bind(this);
     this.onNext6Click = this.onNext6Click.bind(this);
     this.onNextButtClick = this.onNextButtClick.bind(this);
+    this.onImageClick = this.onImageClick.bind(this);
   }
 
   componentDidMount() {
@@ -88,6 +89,19 @@ class App extends React.Component {
     }
   }
 
+  onImageClick(e) {
+    e.preventDefault();
+    const { similarMovies } = this.state;
+    console.log(similarMovies)
+    for (const movie of similarMovies) {
+      console.log(movie.movieID, ' : ', e.target.id)
+      if (movie.movieID == e.target.id) {
+        console.log(movie)
+        this.setState({ descriptionMovie: movie });
+      }
+    }
+  }
+
   render() {
     const { carouselMovies, descriptionMovie } = this.state;
     return (
@@ -102,6 +116,7 @@ class App extends React.Component {
               descriptionMovie={descriptionMovie}
               onPrev6Click={this.onPrev6Click}
               onNext6Click={this.onNext6Click}
+              onImageClick={this.onImageClick}
             />
           </div>
           <div className="descriptionBox">

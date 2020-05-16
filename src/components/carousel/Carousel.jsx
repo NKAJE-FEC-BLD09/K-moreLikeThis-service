@@ -18,11 +18,12 @@ class Carousel extends Component {
       onNext6Click,
       onPrev6Click,
       descriptionMovie,
+      onImageClick,
     } = this.props;
     return (
       <div>
         <div className="carousel">
-          {movies.map((movie) => <Movie key={movie.movieID} movie={movie} descriptionMovie={descriptionMovie} />)}
+          {movies.map((movie) => <Movie key={movie.movieID} movie={movie} descriptionMovie={descriptionMovie} onImageClick={onImageClick} />)}
         </div>
         <div className="navBar">
           <a className="navLeft" href="something" onClick={(e) => onPrev6Click(e)}>prev</a>
@@ -37,6 +38,7 @@ Carousel.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   onNext6Click: PropTypes.func.isRequired,
   onPrev6Click: PropTypes.func.isRequired,
+  onImageClick: PropTypes.func.isRequired,
   descriptionMovie: PropTypes.shape({}).isRequired,
 };
 
