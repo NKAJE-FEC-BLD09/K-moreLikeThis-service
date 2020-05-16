@@ -18,7 +18,9 @@ const DescriptionWords = ({ movie }) => (
       <span className="rating">{movie.rating}</span>
       <span className="genre">{movie.genre}</span>
     </div>
-    <ReviewScore reviewScore={movie.reviewScore} />
+    <div className="stars-to-stars">
+      <ReviewScore reviewScore={movie.reviewScore} />
+    </div>
     <p className="description-paragraph">
       {movie.description}
     </p>

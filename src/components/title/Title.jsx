@@ -5,7 +5,7 @@ import './title.css';
 const Title = () => (
   <div className="titleBox">
     <h2 className="title">More Like This</h2>
-    <div className="learnMore">
+    <div className="">
       <LearnMore />
     </div>
   </div>

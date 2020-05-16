@@ -1,6 +1,11 @@
 body {
   font-family: Verdana, Arial, sans-serif;
   color: #333333;
+  clear: none;
+}
+
+.kyle {
+  clear: none;
 }
 
 .cont {
@@ -8,8 +13,8 @@ body {
 }
 
 .more-like-this {
-  height: 304.2px;
-  width: 626px;
+  height: 350px;
+  width: 667px;
   padding: 20px 21px 24px 20px;
   display: grid;
   grid-template-rows: 39.2px 1fr;
