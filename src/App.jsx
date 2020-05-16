@@ -92,7 +92,7 @@ class App extends React.Component {
   render() {
     const { carouselMovies, descriptionMovie } = this.state;
     return (
-      <div className="cont">
+      // <div className="cont">
         <div className="more-like-this">
           <div>
             <Title />
@@ -113,7 +113,7 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      // </div>
     );
   }
 }
