@@ -99,6 +99,7 @@ class App extends React.Component {
           <div className="carouNav">
             <Carousel
               movies={carouselMovies}
+              descriptionMovie={descriptionMovie}
               onPrev6Click={this.onPrev6Click}
               onNext6Click={this.onNext6Click}
             />
