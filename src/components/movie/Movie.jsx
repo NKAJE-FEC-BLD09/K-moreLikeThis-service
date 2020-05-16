@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Movie = ({ movie }) => (
   <div className="tbd">
-    <img className="image" src={movie.image} alt="stuffandthings" />
+    <img className="k-image" src={movie.image} alt="stuffandthings" />
   </div>
 );
 
