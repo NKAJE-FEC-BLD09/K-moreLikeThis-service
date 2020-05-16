@@ -91,28 +91,26 @@ class App extends React.Component {
   render() {
     const { carouselMovies, descriptionMovie } = this.state;
     return (
-      // <div className="cont">
-        <div className="more-like-this">
-          <div>
-            <Title />
+      <div className="more-like-this">
+        <div>
+          <Title />
+        </div>
+        <div className="descriptousel">
+          <div className="carouNav">
+            <Carousel
+              movies={carouselMovies}
+              onPrev6Click={this.onPrev6Click}
+              onNext6Click={this.onNext6Click}
+            />
           </div>
-          <div className="descriptousel">
-            <div className="carouNav">
-              <Carousel
-                movies={carouselMovies}
-                onPrev6Click={this.onPrev6Click}
-                onNext6Click={this.onNext6Click}
-              />
-            </div>
-            <div className="descriptionBox">
-              <DescriptionImage
-                movie={descriptionMovie}
-                onNextButtClick={this.onNextButtClick}
-              />
-            </div>
+          <div className="descriptionBox">
+            <DescriptionImage
+              movie={descriptionMovie}
+              onNextButtClick={this.onNextButtClick}
+            />
           </div>
         </div>
-      // </div>
+      </div>
     );
   }
 }
