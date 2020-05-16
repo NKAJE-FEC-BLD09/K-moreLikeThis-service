@@ -88,7 +88,6 @@ class App extends React.Component {
     }
   }
 
-
   render() {
     const { carouselMovies, descriptionMovie } = this.state;
     return (
