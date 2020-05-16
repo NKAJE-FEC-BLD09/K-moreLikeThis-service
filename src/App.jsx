@@ -92,11 +92,8 @@ class App extends React.Component {
   onImageClick(e) {
     e.preventDefault();
     const { similarMovies } = this.state;
-    console.log(similarMovies)
     for (const movie of similarMovies) {
-      console.log(movie.movieID, ' : ', e.target.id)
       if (movie.movieID == e.target.id) {
-        console.log(movie)
         this.setState({ descriptionMovie: movie });
       }
     }
