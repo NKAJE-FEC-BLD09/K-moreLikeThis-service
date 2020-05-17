@@ -26,8 +26,8 @@ class Carousel extends Component {
           {movies.map((movie) => <Movie key={movie.movieID} movie={movie} descriptionMovie={descriptionMovie} onImageClick={onImageClick} />)}
         </div>
         <div className="navBar">
-          <a className="navLeft" href="something" onClick={(e) => onPrev6Click(e)}>prev</a>
-          <a className="navRight" href="something" onClick={(e) => onNext6Click(e)}>next</a>
+          <a className="navLeft" href="something" onClick={(e) => onPrev6Click(e)}>prev 6 ◄</a>
+          <a className="navRight" href="something" onClick={(e) => onNext6Click(e)}>next 6 ►</a>
         </div>
       </div>
     );

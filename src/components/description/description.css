@@ -117,6 +117,7 @@
   border-radius: 3px;
   border-width: 1px;
   border-style: solid;
+  cursor: pointer;
 }
 
 .next button {
@@ -127,6 +128,7 @@
   width: 56px;
   top: 7px;
   left: -80px;
+  cursor: pointer;
 }
 
 .stars-to-stars {
