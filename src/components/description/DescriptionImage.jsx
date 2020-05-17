@@ -1,4 +1,5 @@
 import React from 'react';
+import Sound from 'react-sound';
 import PropTypes from 'prop-types';
 import DescriptionWords from './DescriptionWords';
 import './description.css';
@@ -10,7 +11,13 @@ const Description = ({ movie, onNextButtClick }) => {
   const audio = new Audio('i hate computers.mp3');
   const addClick = (e) => {
     e.preventDefault();
-    audio.play();
+    return (
+      <Sound
+        url="i_hate_computers.mp3"
+        volume={90}
+        playStatus={Sound.status.PLAYING}
+      />
+    );
   };
 
   return (
@@ -22,7 +29,7 @@ const Description = ({ movie, onNextButtClick }) => {
         <DescriptionWords movie={movie} />
       </div>
       <div className="add-to-watch">
-        {watchList}
+        <button type="button" onClick={(e) => addClick(e)}>Add to Watchlist</button>
       </div>
       <div
         className="next"
