@@ -4,7 +4,7 @@ import DescriptionWords from './DescriptionWords';
 import './description.css';
 
 const watchList = React.createElement('button', { type: 'button' }, 'Add to Watchlist');
-const next = React.createElement('button', { type: 'button' }, 'next');
+const next = React.createElement('button', { type: 'button' }, 'next »');
 
 const Description = ({ movie, onNextButtClick }) => (
 
