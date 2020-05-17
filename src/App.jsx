@@ -61,7 +61,7 @@ class App extends React.Component {
   onNext6Click(e) {
     e.preventDefault();
     const { carouselLocation, similarMovies } = this.state;
-    const index = 7;
+    const index = 6;
     if (carouselLocation === 'L') {
       this.setState({
         carouselLocation: 'R',
@@ -85,6 +85,7 @@ class App extends React.Component {
         descriptionIndex: descriptionIndex + 1,
         descriptionMovie: similarMovies[descriptionIndex + 1],
         carouselMovies: similarMovies.slice(6, 13),
+        carouselLocation: 'R',
       });
     }
   }
