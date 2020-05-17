@@ -95,7 +95,11 @@ class App extends React.Component {
     const { similarMovies } = this.state;
     for (const movie of similarMovies) {
       if (movie.movieID == e.target.id) {
-        this.setState({ descriptionMovie: movie });
+        const index = similarMovies.indexOf(movie);
+        this.setState({
+          descriptionMovie: movie,
+          descriptionIndex: index,
+        });
       }
     }
   }
