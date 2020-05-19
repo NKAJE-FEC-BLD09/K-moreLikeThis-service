@@ -9,7 +9,7 @@ const imageSeeder = require('./imageSeeder.js');
 
 
 const randomSeeder = () => {
-  for (let i = 6; i <= 100; i += 1) {
+  for (let i = 12; i <= 100; i += 1) {
     const film = new Movie({
       movieName: faker.fake('{{name.title}}'),
       movieID: i,

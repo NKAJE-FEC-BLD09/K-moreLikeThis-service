@@ -1,4 +1,9 @@
+const faker = require('faker');
 const similarMoviesSeeder = require('../randomData/similarMoviesSeeder.js');
+const descriptionGen = require('../randomData/descriptionGenerator.js');
+const randomYear = require('../randomData/randomYear.js');
+const ratingGen = require('../randomData/ratingGenerator.js');
+const starsSeeder = require('../randomData/starsSeeder.js');
 
 const movieData = [{
   movieName: 'Rubber',
@@ -10,12 +15,12 @@ const movieData = [{
   description: 'A homicidal car tire, discovering it has destructive psionic power, sets its sights on a desert town once a mysterious woman becomes its obsession.',
   director: 'Quentin Dupieux',
   stars: ['Stephen Spinella', 'Roxane Mesquida', 'Wings Hauser'],
-  similarMovies: similarMoviesSeeder(),
+  similarMovies: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   genre: 'Horror',
 },
 {
   movieName: 'McLintock!',
-  movieID: 2,
+  movieID: 7,
   year: 1963,
   image: 'https://i.imgur.com/vSwK0MH.jpg',
   rating: 'Passed',
@@ -28,7 +33,7 @@ const movieData = [{
 },
 {
   movieName: 'Zoolander',
-  movieID: 3,
+  movieID: 9,
   year: 2001,
   image: 'https://i.imgur.com/Tc8u4OY.jpg',
   rating: 'PG-13',
@@ -41,7 +46,7 @@ const movieData = [{
 },
 {
   movieName: 'Wedding Crashers',
-  movieID: 4,
+  movieID: 11,
   year: 2005,
   image: 'https://i.imgur.com/GCMuQg9.jpg',
   rating: 'R',
@@ -64,6 +69,85 @@ const movieData = [{
   stars: ['John Travoltoa', 'Nicolas Cage', 'Joan Allen'],
   similarMovies: similarMoviesSeeder(),
   genre: 'Sci-Fi',
-}];
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 6,
+  year: randomYear(),
+  image: 'https://i.imgur.com/HbpXdx1.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 2,
+  year: randomYear(),
+  image: 'https://i.imgur.com/2NkPcHB.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 8,
+  year: randomYear(),
+  image: 'https://i.imgur.com/jee0w0i.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 3,
+  year: randomYear(),
+  image: 'https://i.imgur.com/BEUllsg.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 10,
+  year: randomYear(),
+  image: 'https://i.imgur.com/QLAh53v.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+{
+  movieName: faker.fake('{{name.title}}'),
+  movieID: 4,
+  year: randomYear(),
+  image: 'https://i.imgur.com/7rHZXHm.jpg',
+  rating: ratingGen(),
+  reviewScore: Math.floor(Math.random() * 11),
+  description: descriptionGen(),
+  director: faker.fake('{{name.firstName}} {{name.lastName}}'),
+  stars: starsSeeder(),
+  similarMovies: similarMoviesSeeder(),
+  genre: faker.fake('{{lorem.word}}'),
+},
+];
 
 module.exports = movieData;
